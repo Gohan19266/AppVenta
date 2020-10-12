@@ -7,4 +7,5 @@
     <string name="surname">surname</string>
     <string name="update">update</string>
     <string name="delete">delete</string>
+    <string name="producto">producto</string>
 </resources>

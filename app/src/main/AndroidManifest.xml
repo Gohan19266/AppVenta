@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="learn.mode.appventa">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.main.ClientViewActivity"></activity>
+        <activity android:name=".activity.editor.CategoriaActivity"></activity>
+        <activity android:name=".activity.editor.ProductoActivity" />
+        <activity android:name=".activity.main.ProductoViewActivity" />
+        <activity android:name=".activity.main.CategoriaViewActivity" />
+        <activity android:name=".activity.main.ClientViewActivity" />
         <activity android:name=".activity.main.PrincipalActivity" />
         <activity android:name=".activity.main.MainActivity">
             <intent-filter>
@@ -20,9 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.editor.ClienteActivity"
-            android:theme="@style/ClienteTheme"
-            android:launchMode="singleTask"/>
+        <activity
+            android:name=".activity.editor.ClienteActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ClienteTheme" />
     </application>
 
 </manifest>

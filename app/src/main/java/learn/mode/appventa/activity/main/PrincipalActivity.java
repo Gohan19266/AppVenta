@@ -20,4 +20,13 @@ public class PrincipalActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ClientViewActivity.class);
         startActivity(intent);
     }
+
+    public void categoria(View view2){
+        Intent intent2 = new Intent(this,CategoriaViewActivity.class);
+        startActivity(intent2);
+    }
+    public void producto(View view3){
+        Intent intent3 = new Intent(this,ProductoViewActivity.class);
+        startActivity(intent3);
+    }
 }

@@ -31,12 +31,13 @@
         android:layout_marginEnd="178dp"
         android:layout_marginRight="178dp"
         android:text="Producto"
+        android:onClick="producto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/categoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="135dp"
@@ -45,6 +46,7 @@
         android:layout_marginEnd="175dp"
         android:layout_marginRight="175dp"
         android:text="Categoria"
+        android:onClick="categoria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -63,5 +65,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/categoria" />
 </androidx.constraintlayout.widget.ConstraintLayout>
