@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">AppVenta</string>
     <string name="name">name</string>
-    <string name="apellido">apellido materno y paterno</string>
+    <string name="apellido">apellidos</string>
     <string name="dni">enter dni...</string>
     <string name="save">save</string>
+    <string name="surname">surname</string>
 </resources>
