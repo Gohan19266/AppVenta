@@ -51,9 +51,6 @@ public class ClienteActivity extends AppCompatActivity implements ClienView {
         setDataFromIntentExtra();
     }
 
-
-
-
     private void progressD() {
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Please wait...");

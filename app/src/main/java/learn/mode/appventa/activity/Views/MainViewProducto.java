@@ -2,7 +2,6 @@ package learn.mode.appventa.activity.Views;
 
 import java.util.List;
 
-import learn.mode.appventa.model.Cliente;
 import learn.mode.appventa.model.Producto;
 
 public interface MainViewProducto {

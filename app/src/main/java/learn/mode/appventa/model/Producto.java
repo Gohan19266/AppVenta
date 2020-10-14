@@ -1,11 +1,24 @@
 package learn.mode.appventa.model;
 
+import android.widget.EditText;
+
 public class Producto {
     private int idproducto;
     private String nom_producto;
     private int precio;
     private int cantidad;
     private int idcategoria;
+
+    public Producto(int idproducto, String nom_producto, int precio, int cantidad, int idcategoria) {
+        this.idproducto = idproducto;
+        this.nom_producto = nom_producto;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.idcategoria = idcategoria;
+    }
+
+    public Producto() {
+    }
 
     public int getIdproducto() {
         return idproducto;

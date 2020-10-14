@@ -29,7 +29,6 @@ public class ClientPresenter {
             @Override
             public void onResponse(@NonNull Call<Cliente> call, @NonNull Response<Cliente> response) {
                 view.hideProgress();
-
                 if (response.isSuccessful() && response.body() != null){
                     Boolean success = response.body().getSuccess();
                     if (success){

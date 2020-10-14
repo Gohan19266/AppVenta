@@ -4,11 +4,27 @@ import java.util.List;
 
 import learn.mode.appventa.model.Producto;
 import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 
 public interface ApiProductoInterface {
 
     @GET("/")
     Call<List<Producto>> listar_productos();
+
+    @POST("/add")
+    Call<Producto> guardar_productos(@Body Producto producto);
+
+    @PUT("/{id}")
+    Call<Producto> modifica_productos(@Path("id") int id, @Body Producto producto);
+
+    @DELETE("/{id}")
+    Call<Producto> elimina_producto(@Path("id") int id);
+
+
 }
