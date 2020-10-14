@@ -1,4 +1,4 @@
-package learn.mode.appventa.activity.editor;
+package learn.mode.appventa.activity.Views;
 
 public interface ClienView {
 

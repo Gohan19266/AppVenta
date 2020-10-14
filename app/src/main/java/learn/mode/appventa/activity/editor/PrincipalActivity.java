@@ -1,4 +1,4 @@
-package learn.mode.appventa.activity.main;
+package learn.mode.appventa.activity.editor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import learn.mode.appventa.R;
-import learn.mode.appventa.activity.ProductoViewActivity;
-import learn.mode.appventa.activity.VentaViewActivity;
+import learn.mode.appventa.activity.main.ProductoViewActivity;
+import learn.mode.appventa.activity.main.VentaViewActivity;
+import learn.mode.appventa.activity.main.CategoriaViewActivity;
+import learn.mode.appventa.activity.main.ClientViewActivity;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -24,7 +26,7 @@ public class PrincipalActivity extends AppCompatActivity {
     }
 
     public void categoria(View view2){
-        Intent intent2 = new Intent(this,CategoriaViewActivity.class);
+        Intent intent2 = new Intent(this, CategoriaViewActivity.class);
         startActivity(intent2);
     }
     public void producto(View view3){

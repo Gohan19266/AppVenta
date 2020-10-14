@@ -11,14 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.VentaViewActivity"></activity>
+        <activity android:name=".activity.main.VentaViewActivity"></activity>
         <activity android:name=".activity.editor.CategoriaActivity" />
-        <activity android:name=".activity.ProductoActivity" />
-        <activity android:name=".activity.ProductoViewActivity" />
+        <activity android:name=".activity.editor.ProductoActivity" />
+        <activity android:name=".activity.main.ProductoViewActivity" />
         <activity android:name=".activity.main.CategoriaViewActivity" />
         <activity android:name=".activity.main.ClientViewActivity" />
-        <activity android:name=".activity.main.PrincipalActivity" />
-        <activity android:name=".activity.main.MainActivity">
+        <activity android:name=".activity.editor.PrincipalActivity" />
+        <activity android:name=".activity.editor.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

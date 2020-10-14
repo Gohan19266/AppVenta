@@ -1,7 +1,6 @@
-package learn.mode.appventa.activity;
+package learn.mode.appventa.activity.main;
 
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import learn.mode.appventa.R;
-import learn.mode.appventa.activity.ProductoActivity;
+import learn.mode.appventa.activity.editor.ProductoActivity;
 import learn.mode.appventa.adapter.AdapterProduct;
 import learn.mode.appventa.api.ApiProduct;
 import learn.mode.appventa.apiInterface.ApiProductoInterface;
@@ -26,6 +25,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ProductoViewActivity extends AppCompatActivity {
+    private AdapterProduct.ClickListener clickListener;
     private RecyclerView show_data;
     private RecyclerView.LayoutManager ly;
     private List<Producto> arr_producto = new ArrayList<>();
@@ -55,7 +55,7 @@ public class ProductoViewActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Producto>> call, Response<List<Producto>> response) {
                 if (response.isSuccessful() && response.body() != null){
-                    AdapterProduct adapter = new AdapterProduct(getApplicationContext(),response.body());
+                    AdapterProduct adapter = new AdapterProduct(getApplicationContext(),response.body(), clickListener);
                     show_data.setAdapter(adapter);
                 }
             }

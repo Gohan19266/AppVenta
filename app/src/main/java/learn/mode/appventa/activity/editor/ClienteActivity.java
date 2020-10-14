@@ -13,9 +13,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import learn.mode.appventa.R;
+import learn.mode.appventa.activity.Views.ClienView;
 import learn.mode.appventa.apiInterface.ApiClientInterface;
 
-public class ClienteActivity extends AppCompatActivity implements ClienView{
+public class ClienteActivity extends AppCompatActivity implements ClienView {
 
     EditText text_name,text_surname,text_dni;
     ProgressDialog progressDialog;
