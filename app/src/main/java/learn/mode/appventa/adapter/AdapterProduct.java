@@ -13,17 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import learn.mode.appventa.R;
-import learn.mode.appventa.activity.ProductoActivity;
-import learn.mode.appventa.activity.ProductoViewActivity;
 import learn.mode.appventa.model.Producto;
 
 public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.DefinirData> {
 
     private Context context;
     private List<Producto> readAll;
-
-
-
 
     public AdapterProduct(Context context, List<Producto> readAll) {
         this.context = context;
@@ -64,7 +59,6 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.DefinirD
             text_precio = itemView.findViewById(R.id.precio_producto_item);
             text_cantidad = itemView.findViewById(R.id.cantidad_producto_item);
             text_idcategoria = itemView.findViewById(R.id.idcategoria_producto);
-
         }
     }
 }

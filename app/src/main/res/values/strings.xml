@@ -12,4 +12,5 @@
     <string name="precio">precio</string>
     <string name="cantidad">cantidad</string>
     <string name="categoria">categoria</string>
+    <string name="idproducto">idproducto</string>
 </resources>

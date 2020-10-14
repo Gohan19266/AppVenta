@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+    android:id="@+id/produto_nombre"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:gravity="center"
+    android:text="@string/producto"
+    android:textSize="25dp"
+    android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/producto_precio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:text="@string/precio"
+        android:textColor="#DA8C13"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/cantidad_venta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:text="@string/cantidad"
+        android:visibility="gone"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/idcategoria_venta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:text="@string/categoria"
+        android:visibility="gone"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/idproducto_venta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:text="@string/idproducto"
+        android:textColor="#DA8C13"
+        android:textSize="30dp"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+</LinearLayout>
