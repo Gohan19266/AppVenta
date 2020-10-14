@@ -15,10 +15,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 
 import learn.mode.appventa.R;
+import learn.mode.appventa.activity.Views.MainViewClient;
 import learn.mode.appventa.activity.editor.ClienteActivity;
+import learn.mode.appventa.adapter.MainAdapterClient;
 import learn.mode.appventa.model.Cliente;
 
-public class ClientViewActivity extends AppCompatActivity implements MainViewClient{
+public class ClientViewActivity extends AppCompatActivity implements MainViewClient {
     private static final int INTENT_EDIT = 200;
     private static final int INTENT_ADD = 100;
     FloatingActionButton fab;

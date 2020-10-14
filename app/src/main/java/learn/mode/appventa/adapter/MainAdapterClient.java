@@ -1,8 +1,6 @@
-package learn.mode.appventa.activity.main;
+package learn.mode.appventa.adapter;
 
-import android.content.ClipData;
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

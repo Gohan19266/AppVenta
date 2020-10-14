@@ -1,4 +1,4 @@
-package learn.mode.appventa.activity;
+package learn.mode.appventa.activity.editor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
