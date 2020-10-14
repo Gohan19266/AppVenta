@@ -21,11 +21,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.DefinirD
     private List<Producto> readAll;
     private ClickListener clickListener;
 
-<<<<<<< HEAD
-    public AdapterProduct(Context context, List<Producto> readAll) {
-=======
     public AdapterProduct(Context context, List<Producto> readAll, ClickListener clickListener) {
->>>>>>> albert
         this.context = context;
         this.readAll = readAll;
         this.clickListener = clickListener;
@@ -66,17 +62,13 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.DefinirD
             text_precio = itemView.findViewById(R.id.precio_producto_item);
             text_cantidad = itemView.findViewById(R.id.cantidad_producto_item);
             text_idcategoria = itemView.findViewById(R.id.idcategoria_producto);
-<<<<<<< HEAD
-=======
             card_p = itemView.findViewById(R.id.product_item);
             this.clickListener = clickListener;
             card_p.setOnClickListener(this);
         }
-
         @Override
         public void onClick(View ve) {
             clickListener.onItemClick(ve,getAdapterPosition());
->>>>>>> albert
         }
     }
     public interface ClickListener{
