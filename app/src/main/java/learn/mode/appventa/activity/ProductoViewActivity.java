@@ -1,6 +1,7 @@
 package learn.mode.appventa.activity;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import learn.mode.appventa.R;
+import learn.mode.appventa.activity.ProductoActivity;
 import learn.mode.appventa.adapter.AdapterProduct;
 import learn.mode.appventa.api.ApiProduct;
 import learn.mode.appventa.apiInterface.ApiProductoInterface;
@@ -60,7 +62,7 @@ public class ProductoViewActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Producto>> call, Throwable t) {
-                Toast.makeText(ProductoViewActivity.this, "Error:  "+t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ProductoViewActivity.this, "Error "+t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
