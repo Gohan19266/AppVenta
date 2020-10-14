@@ -9,7 +9,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import learn.mode.appventa.R;
 import learn.mode.appventa.activity.editor.CategoriaActivity;
-import learn.mode.appventa.activity.editor.ProductoActivity;
 
 public class CategoriaViewActivity extends AppCompatActivity {
     FloatingActionButton fb;

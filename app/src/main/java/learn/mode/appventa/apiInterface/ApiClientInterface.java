@@ -1,4 +1,4 @@
-package learn.mode.appventa.api;
+package learn.mode.appventa.apiInterface;
 
 import java.util.List;
 

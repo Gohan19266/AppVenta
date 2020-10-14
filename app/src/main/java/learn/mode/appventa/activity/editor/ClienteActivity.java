@@ -1,11 +1,9 @@
 package learn.mode.appventa.activity.editor;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,15 +12,8 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.thebluealliance.spectrum.SpectrumPalette;
-
 import learn.mode.appventa.R;
-import learn.mode.appventa.api.ApiClient;
-import learn.mode.appventa.api.ApiClientInterface;
-import learn.mode.appventa.model.Cliente;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import learn.mode.appventa.apiInterface.ApiClientInterface;
 
 public class ClienteActivity extends AppCompatActivity implements ClienView{
 

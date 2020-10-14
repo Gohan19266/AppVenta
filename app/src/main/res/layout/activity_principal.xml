@@ -81,6 +81,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             app:cardElevation="8dp"
+            android:onClick="venta"
             app:cardCornerRadius="8dp">
 
             <LinearLayout

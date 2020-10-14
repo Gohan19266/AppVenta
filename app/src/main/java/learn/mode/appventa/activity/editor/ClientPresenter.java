@@ -1,11 +1,9 @@
 package learn.mode.appventa.activity.editor;
 
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 
 import learn.mode.appventa.api.ApiClient;
-import learn.mode.appventa.api.ApiClientInterface;
+import learn.mode.appventa.apiInterface.ApiClientInterface;
 import learn.mode.appventa.model.Cliente;
 import retrofit2.Call;
 import retrofit2.Callback;

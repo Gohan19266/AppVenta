@@ -8,4 +8,8 @@
     <string name="update">update</string>
     <string name="delete">delete</string>
     <string name="producto">producto</string>
+    <string name="nombre">nom_producto</string>
+    <string name="precio">precio</string>
+    <string name="cantidad">cantidad</string>
+    <string name="categoria">categoria</string>
 </resources>

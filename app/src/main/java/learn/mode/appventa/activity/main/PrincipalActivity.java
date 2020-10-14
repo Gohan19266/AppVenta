@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import learn.mode.appventa.R;
+import learn.mode.appventa.activity.ProductoViewActivity;
+import learn.mode.appventa.activity.VentaViewActivity;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -26,7 +28,12 @@ public class PrincipalActivity extends AppCompatActivity {
         startActivity(intent2);
     }
     public void producto(View view3){
-        Intent intent3 = new Intent(this,ProductoViewActivity.class);
+        Intent intent3 = new Intent(this, ProductoViewActivity.class);
         startActivity(intent3);
+    }
+
+    public void venta(View view4){
+        Intent intent4 = new Intent(this, VentaViewActivity.class);
+        startActivity(intent4);
     }
 }
