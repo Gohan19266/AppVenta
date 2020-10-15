@@ -1,4 +1,8 @@
 package learn.mode.appventa.activity.Views;
 
-public class VentaView {
+public interface VentaView {
+    void showProgress();
+    void hideProgress();
+    void onRequestSucces(String message);
+    void onRequestError(String message);
 }

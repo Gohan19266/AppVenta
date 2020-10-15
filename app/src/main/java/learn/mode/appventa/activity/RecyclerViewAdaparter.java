@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,10 +19,12 @@ import learn.mode.appventa.model.Producto;
 public class RecyclerViewAdaparter extends RecyclerView.Adapter<RecyclerViewAdaparter.MyViewHolder> {
     private Context context;
     private List<Producto> readAll;
+    IClicListener icliclistener;
 
-    public RecyclerViewAdaparter(Context context, List<Producto> readAll) {
+    public RecyclerViewAdaparter(Context context, List<Producto> readAll,IClicListener icliclistener) {
         this.context = context;
         this.readAll = readAll;
+        this.icliclistener = icliclistener;
     }
     /*int [] arr;
 
@@ -34,7 +37,7 @@ public class RecyclerViewAdaparter extends RecyclerView.Adapter<RecyclerViewAdap
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view,parent,false);
-        MyViewHolder myViewHolder = new MyViewHolder(view);
+        MyViewHolder myViewHolder = new MyViewHolder(view,icliclistener);
         return myViewHolder;
     }
 
@@ -54,19 +57,32 @@ public class RecyclerViewAdaparter extends RecyclerView.Adapter<RecyclerViewAdap
         return readAll.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
 
         ImageView img;
         TextView text_idcategoria,textproducto,textprecio,textcantidad,textcategoria;
-
-        public MyViewHolder(@NonNull View itemView) {
+        IClicListener itemClickListener;
+        public MyViewHolder(@NonNull View itemView,IClicListener itemClickListener) {
             super(itemView);
-            img = itemView.findViewById(R.id.imageView);
-            textproducto = itemView.findViewById(R.id.produto_nombre);
-            textprecio = itemView.findViewById(R.id.producto_precio2);
-            textcantidad = itemView.findViewById(R.id.cantidad_venta);
-            textcategoria= itemView.findViewById(R.id.idcategoria_venta);
-            text_idcategoria = itemView.findViewById(R.id.idproducto_venta);
+            //img = itemView.findViewById(R.id.imageView);
+            textproducto = itemView.findViewById(R.id.producto);
+            textprecio = itemView.findViewById(R.id.precio);
+            textcantidad = itemView.findViewById(R.id.cantidad);
+            /*textcategoria= itemView.findViewById(R.id.catego);
+            text_idcategoria = itemView.findViewById(R.id.idproducto_venta);*/
+
+            this.itemClickListener = itemClickListener;
+            textproducto.setOnClickListener(this);
         }
+        @Override
+        public void onClick(View v) {
+            itemClickListener.onItemClick(v,getAdapterPosition());
+            System.out.println("estas tocanco el nombre");
+            Toast.makeText(context, "estamos en onclick", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public interface IClicListener{
+        void onItemClick(View view, int position);
     }
 }
