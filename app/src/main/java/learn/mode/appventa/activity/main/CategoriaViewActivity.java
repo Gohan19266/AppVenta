@@ -12,6 +12,7 @@ import learn.mode.appventa.activity.editor.CategoriaActivity;
 
 public class CategoriaViewActivity extends AppCompatActivity {
     FloatingActionButton fb;
+    ProductoViewActivity read;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
