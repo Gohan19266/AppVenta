@@ -3,14 +3,18 @@ package learn.mode.appventa.activity.main;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
 import learn.mode.appventa.R;
 import learn.mode.appventa.activity.RecyclerViewAdaparter;
+import learn.mode.appventa.activity.Views.MainViewProducto;
 import learn.mode.appventa.adapter.AdapterProduct;
 import learn.mode.appventa.api.ApiProduct;
 import learn.mode.appventa.apiInterface.ApiProductoInterface;
@@ -19,19 +23,22 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class VentaViewActivity extends AppCompatActivity {
+public class VentaViewActivity extends AppCompatActivity  implements MainViewProducto {
 
+    private static final int INTENT_EDIT = 200;
+    private static final int INTENT_ADD =100;
+
+    FloatingActionButton fab;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-    RecyclerViewAdaparter recyclerViewAdaparter;
-   // int []arr = {R.drawable.carne,R.drawable.mandarina,R.drawable.tomate};
+    SwipeRefreshLayout swipe_refresh;
+    RecyclerViewAdaparter.IClicListener itemCLickListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_venta_view);
-
-        recyclerView = findViewById(R.id.recylcerView);
+        recyclerView = findViewById(R.id.swipe_refresh2);
         layoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
 
@@ -49,10 +56,11 @@ public class VentaViewActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Producto>> call, Response<List<Producto>> response) {
                 if (response.isSuccessful() && response.body() != null){
-                    RecyclerViewAdaparter adapter = new RecyclerViewAdaparter(getApplicationContext(),response.body());
+                    RecyclerViewAdaparter adapter = new RecyclerViewAdaparter(getApplicationContext(),response.body(),itemCLickListener);
                     recyclerView.setAdapter(adapter);
                     recyclerView.setHasFixedSize(true);
                     System.out.println("tunas " + response.body());
+
                 }
             }
 
@@ -61,5 +69,25 @@ public class VentaViewActivity extends AppCompatActivity {
                 Toast.makeText(VentaViewActivity.this, "Error : " + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void hideLoading() {
+
+    }
+
+    @Override
+    public void onGetResult(List<Producto> productos) {
+
+    }
+
+    @Override
+    public void onErrorLoading(String message) {
+
     }
 }
