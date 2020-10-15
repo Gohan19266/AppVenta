@@ -102,7 +102,6 @@ public class ProductoViewActivity extends AppCompatActivity implements MainViewP
                 Toast.makeText(ProductoViewActivity.this, "Error "+t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     @Override

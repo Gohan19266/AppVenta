@@ -13,4 +13,5 @@
     <string name="cantidad">cantidad</string>
     <string name="categoria">categoria</string>
     <string name="idproducto">idproducto</string>
+    <string name="nombre_cat">nombre_cat</string>
 </resources>

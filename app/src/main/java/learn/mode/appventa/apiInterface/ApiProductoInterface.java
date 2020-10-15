@@ -2,6 +2,7 @@ package learn.mode.appventa.apiInterface;
 
 import java.util.List;
 
+import learn.mode.appventa.model.Categoria;
 import learn.mode.appventa.model.Producto;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -26,5 +27,7 @@ public interface ApiProductoInterface {
     @DELETE("/{id}")
     Call<Producto> elimina_producto(@Path("id") int id);
 
+    @GET("/categoria")
+    Call<List<Categoria>> listar_categorias();
 
 }
