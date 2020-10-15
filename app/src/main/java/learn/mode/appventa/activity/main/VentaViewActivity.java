@@ -31,20 +31,21 @@ public class VentaViewActivity extends AppCompatActivity  implements MainViewPro
     FloatingActionButton fab;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    RecyclerViewAdaparter.IClicListener iClicListener;
     SwipeRefreshLayout swipe_refresh;
-    RecyclerViewAdaparter.IClicListener itemCLickListener;
+    ProductoViewActivity productoViewActivity;
+    AdapterProduct.ClickListener clickListener;
+    AdapterProduct adapterProduct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_venta_view);
-        recyclerView = findViewById(R.id.swipe_refresh2);
+        recyclerView = findViewById(R.id.recycler_view2);
         layoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
 
         //recyclerView.setAdapter(recyclerViewAdaparter);
-
-
         getProducto();
     }
 
@@ -56,7 +57,7 @@ public class VentaViewActivity extends AppCompatActivity  implements MainViewPro
             @Override
             public void onResponse(Call<List<Producto>> call, Response<List<Producto>> response) {
                 if (response.isSuccessful() && response.body() != null){
-                    RecyclerViewAdaparter adapter = new RecyclerViewAdaparter(getApplicationContext(),response.body(),itemCLickListener);
+                    RecyclerViewAdaparter adapter = new RecyclerViewAdaparter(getApplicationContext(),response.body(), iClicListener);
                     recyclerView.setAdapter(adapter);
                     recyclerView.setHasFixedSize(true);
                     System.out.println("tunas " + response.body());
