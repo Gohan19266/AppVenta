@@ -19,27 +19,28 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#487178"/>\
+
     <RelativeLayout
-        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#B0E1DC">
+        android:background="#B0E1DC"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/idcategoria_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/nom_categoria_item"
-            android:text="@string/nombre"
-            android:textSize="15sp"
-            android:textColor="@android:color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:text="@string/nombre_cat"
+            android:textColor="#232020"
+            android:textSize="36sp" />
 
 
     </RelativeLayout>

@@ -23,7 +23,12 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-            db.execSQL("create table "+TABLE_NAME+"(IDPRODUCTO INTEGER PRIMARY KEY AUTOINCREMENT , NAMEPRODUCTO TEXT, PRECIOPRODUCTO INTEGER, CANTIDADOPRODUCTO INTEGER, IDCATEGORIA INTEGER, IDPRODUCTO INTEGER)");
+            db.execSQL("create table "+TABLE_NAME+"(ID INTEGER PRIMARY KEY AUTOINCREMENT " +
+                    ", NAMEPRODUCTO TEXT" +
+                    ", PRECIOPRODUCTO INTEGER" +
+                    ", CANTIDADOPRODUCTO INTEGER" +
+                    ", IDCATEGORIA INTEGER" +
+                    ", IDPRODUCTO INTEGER)");
 
         }
 
@@ -33,7 +38,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             onCreate(db);
         }
 
-        public boolean insertData(String nameproducto , String precioproducto, String cantidadproducto, String idcategoria, String idproducto){
+        public boolean insertData(String nameproducto , String precioproducto
+                , String cantidadproducto, String idcategoria, String idproducto){
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
             contentValues.put(COL_2,nameproducto);

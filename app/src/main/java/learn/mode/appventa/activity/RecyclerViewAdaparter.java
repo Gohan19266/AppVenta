@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,23 +20,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import learn.mode.appventa.R;
-import learn.mode.appventa.apiInterface.DatabaseHelper;
 import learn.mode.appventa.model.Producto;
 
-public class RecyclerViewAdaparter extends RecyclerView.Adapter<RecyclerViewAdaparter.MyViewHolder> {
+public class RecyclerViewAdaparter extends RecyclerView.Adapter<RecyclerViewAdaparter.MyViewHolder>
+    implements View.OnClickListener{
+
+
     private Context context;
     private List<Producto> readAll;
-    DatabaseHelper myDb;
+    private View.OnClickListener listener;
 
     public RecyclerViewAdaparter(Context context, List<Producto> readAll) {
         this.context = context;
         this.readAll = readAll;
     }
-    /*int [] arr;
-
-    public RecyclerViewAdaparter(int[] arr) {
-        this.arr = arr;
-    }*/
 
     @NonNull
     @Override
@@ -45,12 +41,14 @@ public class RecyclerViewAdaparter extends RecyclerView.Adapter<RecyclerViewAdap
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view,parent,false);
         MyViewHolder myViewHolder = new MyViewHolder(view);
+
+        view.setOnClickListener(this);;
+
         return myViewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        int i=0;
         Producto prod = readAll.get(position);
         //holder.img.setImageResource(arr[position]);
         holder.textproducto.setText(prod.getNom_producto());
@@ -59,7 +57,7 @@ public class RecyclerViewAdaparter extends RecyclerView.Adapter<RecyclerViewAdap
         holder.textcategoria.setText(Integer.toString(prod.getIdcategoria()));
         holder.text_idproducto.setText(Integer.toString(prod.getIdproducto()));
 
-        holder.textproducto.setOnClickListener(new View.OnClickListener() {
+        /*holder.textproducto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 System.out.println(position+" : posicion"+readAll.get(position).getIdproducto()+" ? "+ readAll.get(position).getNom_producto());
@@ -72,13 +70,23 @@ public class RecyclerViewAdaparter extends RecyclerView.Adapter<RecyclerViewAdap
                     Toast.makeText(context, "Data no Inserted", Toast.LENGTH_SHORT).show();
                 }
             }
-        });
-        i++;
+        });*/
     }
 
     @Override
     public int getItemCount() {
         return readAll.size();
+    }
+
+    public void setOnclickListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (listener != null){
+            listener.onClick(v);
+        }
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
