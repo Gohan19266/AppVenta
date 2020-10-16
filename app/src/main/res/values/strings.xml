@@ -14,5 +14,8 @@
     <string name="categoria">categoria</string>
     <string name="idproducto">idproducto</string>
     <string name="nombre_cat">nombre_cat</string>
+<<<<<<< HEAD
     <string name="addCarrito">Articulo agregado al carrito</string>
+=======
+>>>>>>> 5dbad11f9d510513dca3c0deb73104cac9ef857e
 </resources>

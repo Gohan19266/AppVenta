@@ -91,29 +91,29 @@ public class VentaViewActivity extends AppCompatActivity {
                 dialog.setMessage("¿Deseas agregar al carrito?").
                         setCancelable(true).
                         setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String nombre = response.body().get(recyclerView.getChildAdapterPosition(v)).getNom_producto();
-                        String precio = String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getPrecio());
-                        String cantidad= String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getCantidad());
-                        String idcategoria = String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getIdproducto());
-                        String idproducto = String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getIdproducto());
-                        System.out.println("nombre "+ nombre);
-                        boolean isInserted = dbProducto.insertData(
-                                nombre,
-                                precio,
-                                cantidad,
-                                idcategoria,
-                                idproducto
-                        );
-                        if (isInserted == true){
-                            sheetDialog();
-                        }else{
-                            Toast.makeText(VentaViewActivity.this, "cancel", Toast.LENGTH_SHORT).show();
-                        }
-                    }
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String nombre = response.body().get(recyclerView.getChildAdapterPosition(v)).getNom_producto();
+                                String precio = String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getPrecio());
+                                String cantidad= String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getCantidad());
+                                String idcategoria = String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getIdproducto());
+                                String idproducto = String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getIdproducto());
+                                System.out.println("nombre "+ nombre);
+                                boolean isInserted = dbProducto.insertData(
+                                        nombre,
+                                        precio,
+                                        cantidad,
+                                        idcategoria,
+                                        idproducto
+                                );
+                                if (isInserted == true){
+                                    sheetDialog();
+                                }else{
+                                    Toast.makeText(VentaViewActivity.this, "cancel", Toast.LENGTH_SHORT).show();
+                                }
+                            }
 
-                });
+                        });
                 dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
