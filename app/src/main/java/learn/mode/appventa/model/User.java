@@ -1,15 +1,14 @@
 package learn.mode.appventa.model;
 
 public class User {
-    private int id;
+    private String _id;
     private String username;
     private String password;
     private String rol;
     private String token;
 
-
-    public User(int id, String username, String password, String rol) {
-        this.id = id;
+    public User(String _id, String username, String password, String rol) {
+        this._id = _id;
         this.username = username;
         this.password = password;
         this.rol = rol;
@@ -23,14 +22,13 @@ public class User {
         this.password = password;
     }
 
-    public int getId() {
-        return id;
+    public String get_id() {
+        return _id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void set_id(String _id) {
+        this._id = _id;
     }
-
     public String getUsername() {
         return username;
     }

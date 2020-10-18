@@ -12,6 +12,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 
+import learn.mode.appventa.LoginActivity;
 import learn.mode.appventa.R;
 import learn.mode.appventa.activity.editor.PrincipalActivity;
 
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void changeActivity(View view){
 
-        Intent intent= new Intent(this,PrincipalActivity.class);
+        Intent intent= new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
