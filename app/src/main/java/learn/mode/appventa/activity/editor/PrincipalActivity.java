@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import learn.mode.appventa.LoginActivity;
 import learn.mode.appventa.R;
 import learn.mode.appventa.activity.main.ProductoViewActivity;
 import learn.mode.appventa.activity.main.VentaViewActivity;
@@ -21,7 +22,7 @@ public class PrincipalActivity extends AppCompatActivity {
     }
 
     public void cliente(View view){
-        Intent intent = new Intent(this, ClientViewActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 

@@ -3,6 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorFondo">#E1D8DB</color>
+    <color name="color_input">#FF2F3231</color>
 
     <!--color palete-->
     <color name="white">#dde6ec</color>
