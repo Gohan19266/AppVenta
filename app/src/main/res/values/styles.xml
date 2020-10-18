@@ -22,6 +22,7 @@
         <item name="colorAccent">@color/colorPrimaryDark</item>
     </style>
 
+<<<<<<< HEAD
     <style name="mylogin">
         <item name="android:colorControlNormal">#2F3231</item>
         <item name="android:colorControlActivated">#2dc0a0</item>
@@ -29,4 +30,14 @@
         <item name="android:textColorHint">#2F3231</item>
         <item name="android:colorControlHighlight">#FF2F3231</item>
     </style>
+=======
+    <!--Sheet style-->
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+>>>>>>> 1450f35a8fd503743d9354dbfb892403a69982a2
 </resources>

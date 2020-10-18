@@ -6,6 +6,16 @@
     <color name="colorFondo">#E1D8DB</color>
     <color name="color_input">#FF2F3231</color>
 
+    <!--colores sheet dialog-->
+    <color name="colorPrimary2">#2196F3</color>
+    <color name="colorPrimaryDark2">#1976D2</color>
+    <color name="colorAccent2">#FF5252</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecundaryText">#757575</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDivider">#ECECEC</color>
+
+
     <!--color palete-->
     <color name="white">#dde6ec</color>
     <color name="blue">#7ec4ed</color>

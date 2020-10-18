@@ -42,6 +42,7 @@ public class CategoriaViewActivity extends AppCompatActivity implements MainView
     List<Categoria> lista_categoria;
 
     FloatingActionButton fb;
+    ProductoViewActivity read;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
