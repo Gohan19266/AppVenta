@@ -13,9 +13,12 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import learn.mode.appventa.LoginActivity;
 import learn.mode.appventa.R;
+import learn.mode.appventa.activity.framengts.BlankFragment;
 import learn.mode.appventa.activity.framengts.HomeFragment;
 import learn.mode.appventa.activity.framengts.Shop2Frament;
+import learn.mode.appventa.activity.framengts.reportFragment;
 import learn.mode.appventa.activity.main.VentaViewActivity;
 
 public class PrincipalActivity extends AppCompatActivity {
@@ -59,6 +62,16 @@ public class PrincipalActivity extends AppCompatActivity {
                 if (item.getItemId() == R.id.menu_shop){
                     showSelectFragment(new Shop2Frament());
                 }
+
+                if (item.getItemId() == R.id.menu_ventas){
+                    showSelectFragment(new reportFragment());
+                }
+
+                if (item.getItemId() == R.id.menu_perfil){
+                    Intent intent = new Intent (getApplicationContext(), LoginActivity.class);
+                    startActivityForResult(intent, 0);
+                }
+
                 return true;
             }
         });

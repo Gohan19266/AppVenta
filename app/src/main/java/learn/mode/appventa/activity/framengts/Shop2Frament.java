@@ -115,18 +115,18 @@ public class Shop2Frament extends Fragment {
                             System.out.println("venta create");
                             System.out.println("vender");
                             System.out.println("estamos en vender");
-                            /*for (int i=0; i<listshop.size();i++){
+                            for (int i=0; i<listshop.size();i++){
                                 Detalle_venta detalle_venta= new Detalle_venta();
                                 detalle_venta.setPrecio(listshop.get(i).getPrecioproducto()*listshop.get(i).getCantidadproducto());
                                 detalle_venta.setCantidad(listshop.get(i).getCantidadproducto());
                                 detalle_venta.setIdproducto(listshop.get(i).getIdproducto());
-                                detalle_venta.setIdventa(listshop.get(i).getId());
+                                detalle_venta.setIdventa(2);
                                 ApiVentaInterface apiDetalleinterface = ApiVenta.getConnectionVenta().create(ApiVentaInterface.class);
                                 Call<Detalle_venta> detallevet = apiDetalleinterface.guardar_detalle(detalle_venta);
                                 detallevet.enqueue(new Callback<Detalle_venta>() {
                                     @Override
                                     public void onResponse(Call<Detalle_venta> call, Response<Detalle_venta> response) {
-                                        Toast.makeText(getContext(), "Venta creada", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getContext(), "Venta creada confirmed", Toast.LENGTH_SHORT).show();
                                         System.out.println("detalle create");
                                     }
 
@@ -136,7 +136,7 @@ public class Shop2Frament extends Fragment {
                                     }
                                 });
                                 System.out.println(listshop.get(i).getNameproducto());
-                            }*/
+                            }
                         }
                     }
 
