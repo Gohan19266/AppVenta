@@ -50,9 +50,7 @@ public class ProductoActivity extends AppCompatActivity implements ProductoView 
         Intent int3 = getIntent();
         id = int3.getIntExtra("id",0);
         nombres = int3.getStringExtra("nombre");
-        System.out.println("Soy nombre" + nombres);
         precios = String.valueOf(int3.getIntExtra("precio",0));
-        System.out.println("Soy precio" + precios);
         cantidades = String.valueOf(int3.getIntExtra("cantidad",0));
 
         setDataFromIntentExtra();
@@ -156,7 +154,7 @@ public class ProductoActivity extends AppCompatActivity implements ProductoView 
         }
 
     }
-
+/*
     public void cargar_categoria(){
         ApiProductoInterface data = ApiProduct.getConnection().create(ApiProductoInterface.class);
         ArrayList<Categoria> ar_ca = new ArrayList<Categoria>();
@@ -169,6 +167,8 @@ public class ProductoActivity extends AppCompatActivity implements ProductoView 
         spinner.setAdapter(categoria_adapter);
 
     }
+
+ */
     private void setDataFromIntentExtra() {
         if (id != 0){
             name_pro.setText(nombres);
