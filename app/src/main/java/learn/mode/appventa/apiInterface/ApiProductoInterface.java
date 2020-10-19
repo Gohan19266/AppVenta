@@ -3,6 +3,7 @@ package learn.mode.appventa.apiInterface;
 import java.util.List;
 
 import learn.mode.appventa.model.Categoria;
+import learn.mode.appventa.model.Detalle_venta;
 import learn.mode.appventa.model.Producto;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -30,4 +31,7 @@ public interface ApiProductoInterface {
     @GET("/categoria")
     Call<List<Categoria>> listar_categorias();
 
+
+    @GET("/venta")
+    Call<List<Detalle_venta>>  obtenerID();
 }

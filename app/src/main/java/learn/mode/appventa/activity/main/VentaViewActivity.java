@@ -75,7 +75,7 @@ public class VentaViewActivity extends AppCompatActivity {
     }
 
     private void clickRecyclerView(RecyclerViewAdaparter adapter, Response<List<Producto>> response) {
-        adapter.setOnclickListener(new View.OnClickListener() {
+        /*adapter.setOnclickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder dialog = new AlertDialog.Builder(VentaViewActivity.this);
@@ -117,7 +117,7 @@ public class VentaViewActivity extends AppCompatActivity {
                 titulo.setTitle("Agregar");
                 titulo.show();
             }
-        });
+        });*/
     }
 
     private void sheetDialog() {

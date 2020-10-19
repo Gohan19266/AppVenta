@@ -8,7 +8,15 @@ public class ProductoShop {
     private int idcategoria;
     private int idproducto;
     private int idusuario;
+    private int totalproducto;
 
+    public int getTotalproducto() {
+        return totalproducto;
+    }
+
+    public void setTotalproducto(int totalproducto) {
+        this.totalproducto = totalproducto;
+    }
 
     public int getId() {
         return id;

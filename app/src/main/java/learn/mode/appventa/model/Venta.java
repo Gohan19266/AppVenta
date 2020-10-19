@@ -4,7 +4,15 @@ public class Venta {
     private int idventa;
     private String fecha;
     private double total;
-    private int idcliente;
+    private String idcliente;
+
+    public String getIdcliente() {
+        return idcliente;
+    }
+
+    public void setIdcliente(String idcliente) {
+        this.idcliente = idcliente;
+    }
 
     public int getIdventa() {
         return idventa;
@@ -30,11 +38,4 @@ public class Venta {
         this.total = total;
     }
 
-    public int getIdcliente() {
-        return idcliente;
-    }
-
-    public void setIdcliente(int idcliente) {
-        this.idcliente = idcliente;
-    }
 }

@@ -16,6 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         public static final String COL_5 = "IDCATEGORIA";
         public static final String COL_6 = "IDPRODUCTO";
         public static final String COL_7 = "IDUSUARIO";
+        public static final String COL_8 = "TOTALPRODUCTO";
         public DatabaseHelper(Context context) {
             super(context, DATABASE_NAME, null, 1);
 
@@ -29,7 +30,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                     ", CANTIDADOPRODUCTO INTEGER" +
                     ", IDCATEGORIA INTEGER" +
                     ", IDPRODUCTO INTEGER" +
-                    ", IDUSUARIO INTEGER)");
+                    ", IDUSUARIO INTEGER" +
+                    ",TOTALPRODUCTO INTEGER)");
 
         }
 
@@ -40,7 +42,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         }
 
         public boolean insertData(String nameproducto , String precioproducto
-                , String cantidadproducto, String idcategoria, String idproducto,String idusuario){
+                , String cantidadproducto, String idcategoria, String idproducto,String idusuario,String totalproducto){
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
             contentValues.put(COL_2,nameproducto);
@@ -49,6 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             contentValues.put(COL_5,idcategoria);
             contentValues.put(COL_6,idproducto);
             contentValues.put(COL_7,idusuario);
+            contentValues.put(COL_8,totalproducto);
             long result = db.insert(TABLE_NAME,null,contentValues);
             if (result ==-1){
                 return false;
