@@ -40,10 +40,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_action_per"
-                android:textColor="@color/color_input"
                 android:ems="10"
+                android:fontFamily="@font/poppins_light"
                 android:hint="Username"
                 android:inputType="textPersonName"
+                android:textColor="@color/color_input"
                 tools:ignore="RtlCompat" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,10 +74,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableStart="@drawable/ic_action_name"
-                android:textColor="@color/color_input"
                 android:ems="10"
+                android:fontFamily="@font/poppins_light"
                 android:hint="Password"
                 android:inputType="textPassword"
+                android:textColor="@color/color_input"
                 tools:ignore="RtlCompat" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,6 +98,7 @@
             android:layout_marginRight="68dp"
             android:layout_marginBottom="96dp"
             android:background="@drawable/btn_round"
+            android:fontFamily="@font/poppins_light"
             android:text="Login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

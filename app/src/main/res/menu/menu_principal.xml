@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_perfil"
+        android:title="Perfil"
+        android:icon="@drawable/ic_action_per"/>
    <item
        android:id="@+id/menu_home"
        android:title="@string/inicio"
@@ -8,6 +12,10 @@
     <item
         android:id="@+id/menu_shop"
         android:title="Shop"
+        android:icon="@drawable/ic_shopping"/>
+    <item
+        android:id="@+id/menu_ventas"
+        android:title="Registro"
         android:icon="@drawable/ic_shopping"/>
 
 </menu>
