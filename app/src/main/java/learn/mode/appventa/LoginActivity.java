@@ -2,7 +2,9 @@ package learn.mode.appventa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +26,9 @@ public class LoginActivity extends AppCompatActivity {
     TextInputEditText usuario, contraseña;
     Button btn1, btn2;
     private View view;
+    public static final String Name = "id_user" ;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +36,14 @@ public class LoginActivity extends AppCompatActivity {
         usuario = findViewById(R.id.user);
         contraseña = findViewById(R.id.password);
         btn1 = findViewById(R.id.entrar_login);
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Login();
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(Name, id);
+                
             }
         });
     }

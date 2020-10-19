@@ -68,7 +68,7 @@ public class Shop2Frament extends Fragment {
         listshop = new ArrayList<>();
 
         SharedPreferences sharpref = getActivity().getPreferences(getActivity().MODE_PRIVATE);
-        String valor = sharpref.getString("name","No hay dato");
+        String valor = sharpref.getString("Name","No hay dato");
 
         //Cada vez que inicio sesion, este Toast me muestra el dato supuestamente guardado correctamente, pero cuando salgo y vuelvo a entrar, el dato es "No hay dato"
         Toast.makeText(getActivity(), ""+valor, Toast.LENGTH_LONG).show();
@@ -101,7 +101,7 @@ public class Shop2Frament extends Fragment {
                 vent.setTotal(total);
                 vent.setIdcliente(valor);
                 System.out.println("objeto venta"+vent);
-                System.out.println("usuario"+usuario);
+                System.out.println("usuario"+valor);
                 System.out.println("fecha"+vent.getFecha());
                 System.out.println("cliente"+vent.getIdcliente());
                 System.out.println("total"+vent.getTotal());

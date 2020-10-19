@@ -5,17 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.framengts.Shop2Frament"
-    android:background="#dadce0">
+    android:background="#424242">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:text="@string/carrito"
-        android:textColor="@color/colorPrimaryText"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:id="@+id/textCarrito"/>
     <Button
         android:id="@+id/venda"
         android:layout_width="100dp"
@@ -31,13 +22,28 @@
         android:layout_marginBottom="10dp"
         android:background="@color/colorDivider"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_data_productoshop"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="61dp"
-        tools:listitem="@layout/productoshop_item"/>
+        <TextView
+            android:id="@+id/textCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2DC0A0"
+            android:fontFamily="@font/poppins_light"
+            android:gravity=""
+            android:padding="15dp"
+            android:text="@string/carrito"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_data_productoshop"
+            android:layout_width="match_parent"
+            android:layout_height="671dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="61dp"
+            android:background="#424242"
+            tools:listitem="@layout/productoshop_item" />
+
 
     <TextView
         android:id="@+id/totalcompra"
