@@ -103,12 +103,14 @@ public class HomeFragment extends Fragment {
                                 String cantidad= String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getCantidad());
                                 String idcategoria = String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getIdcategoria());
                                 String idproducto = String.valueOf(response.body().get(recyclerView.getChildAdapterPosition(v)).getIdproducto());
+                                String totalproducto = String.valueOf(Integer.valueOf(cantidad)*Integer.valueOf(precio));
                                 System.out.println("nombre "+ nombre);
                                 System.out.println("precio "+ precio);
                                 System.out.println("cantidad "+ cantidad);
                                 System.out.println("idcategoria "+ idcategoria);
                                 System.out.println("idproducto "+ idproducto);
                                 System.out.println("nombre "+ nombre);
+                                System.out.println("total producto"+totalproducto);
 
                                 ///String idusuario = "2";
                                 boolean isInserted = dbProducto.insertData(
@@ -117,7 +119,8 @@ public class HomeFragment extends Fragment {
                                         cantidad,
                                         idcategoria,
                                         idproducto,
-                                        "1"
+                                        "1",
+                                        totalproducto
                                 );
                                 if (isInserted == true){
                                     sheetDialog();

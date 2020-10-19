@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiVenta {
     private static Retrofit retrofit;
-    private static String BASE_URL="https://javaservice-ventas.herokuapp.com/";
+    private static String BASE_URL="https://java2service.herokuapp.com/";
 
     public static Retrofit getConnectionVenta(){
         if (retrofit == null) {
