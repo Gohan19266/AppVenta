@@ -53,7 +53,7 @@ public class PrincipalActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.menu_home){
                     showSelectFragment(new HomeFragment());
-                    /*Intent test = new Intent(getApplicationContext(),VentaViewActivity.class);
+                    /*Intent test = new Intent(getApplicationContext(),Shop2Fragment.class);
                     startActivity(test);*/
                 }
                 if (item.getItemId() == R.id.menu_shop){

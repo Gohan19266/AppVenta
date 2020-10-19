@@ -13,7 +13,7 @@
     android:clickable="true"
     android:focusable="true"
     android:id="@+id/categoria_item">
-    
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="98dp"
