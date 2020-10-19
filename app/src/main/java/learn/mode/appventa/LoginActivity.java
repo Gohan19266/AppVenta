@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 Login();
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.putString(Name, id);
-                
+
             }
         });
     }
