@@ -1,26 +1,34 @@
 package learn.mode.appventa.activity.editor;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import learn.mode.appventa.R;
-import learn.mode.appventa.activity.main.ProductoViewActivity;
+import learn.mode.appventa.activity.framengts.HomeFragment;
+import learn.mode.appventa.activity.framengts.Shop2Frament;
 import learn.mode.appventa.activity.main.VentaViewActivity;
-import learn.mode.appventa.activity.main.CategoriaViewActivity;
-import learn.mode.appventa.activity.main.ClientViewActivity;
 
 public class PrincipalActivity extends AppCompatActivity {
-
+    BottomNavigationView bnv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+        bnv =(BottomNavigationView) findViewById(R.id.idbottom);
+        opcionesmenu();
     }
 
-    public void cliente(View view){
+    /*public void cliente(View view){
         Intent intent = new Intent(this, ClientViewActivity.class);
         startActivity(intent);
     }
@@ -34,8 +42,45 @@ public class PrincipalActivity extends AppCompatActivity {
         startActivity(intent3);
     }
 
-    public void venta(View view4){
+   */ public void venta(View view4){
         Intent intent4 = new Intent(this, VentaViewActivity.class);
         startActivity(intent4);
+    }
+
+    private void opcionesmenu() {
+        bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.menu_home){
+                    showSelectFragment(new HomeFragment());
+                    /*Intent test = new Intent(getApplicationContext(),VentaViewActivity.class);
+                    startActivity(test);*/
+                }
+                if (item.getItemId() == R.id.menu_shop){
+                    showSelectFragment(new Shop2Frament());
+                }
+                return true;
+            }
+        });
+        /*bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.menu_home){
+                    Intent intent4 = new Intent(getBaseContext(), VentaViewActivity.class);
+                    startActivity(intent4);
+                }
+                if (item.getItemId() == R.id.menu_shop){
+                    showSelectFragment(new Shop2Frament());
+                }
+
+                return true;
+            }
+        });*/
+    }
+
+    private void showSelectFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction().replace(R.id.container2,fragment)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                .commit();
     }
 }

@@ -7,15 +7,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper{
-        public static final String DATABASE_NAME= "product.db";
-        public static final String TABLE_NAME= "product_table";
+        public static final String DATABASE_NAME= "product2.db";
+        public static final String TABLE_NAME= "product_table2";
         public static final String COL_1= "ID";
         public static final String COL_2= "NAMEPRODUCTO";
         public static final String COL_3 = "PRECIOPRODUCTO";
         public static final String COL_4 = "CANTIDADOPRODUCTO";
         public static final String COL_5 = "IDCATEGORIA";
         public static final String COL_6 = "IDPRODUCTO";
-
+        public static final String COL_7 = "IDUSUARIO";
         public DatabaseHelper(Context context) {
             super(context, DATABASE_NAME, null, 1);
 
@@ -28,7 +28,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                     ", PRECIOPRODUCTO INTEGER" +
                     ", CANTIDADOPRODUCTO INTEGER" +
                     ", IDCATEGORIA INTEGER" +
-                    ", IDPRODUCTO INTEGER)");
+                    ", IDPRODUCTO INTEGER" +
+                    ", IDUSUARIO INTEGER)");
 
         }
 
@@ -39,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         }
 
         public boolean insertData(String nameproducto , String precioproducto
-                , String cantidadproducto, String idcategoria, String idproducto){
+                , String cantidadproducto, String idcategoria, String idproducto,String idusuario){
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
             contentValues.put(COL_2,nameproducto);
@@ -47,6 +48,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             contentValues.put(COL_4,cantidadproducto);
             contentValues.put(COL_5,idcategoria);
             contentValues.put(COL_6,idproducto);
+            contentValues.put(COL_7,idusuario);
             long result = db.insert(TABLE_NAME,null,contentValues);
             if (result ==-1){
                 return false;

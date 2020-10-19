@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 package learn.mode.appventa.activity;
 
 import android.content.Context;
